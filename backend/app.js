@@ -7,7 +7,12 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
+//routes
 const authRoutes = require("./routes/auth.js");
+const userRoutes = require("./routes/user.js");
+const categoryRoutes = require("./routes/category.js");
+const productRoutes = require("./routes/product.js");
+const orderRoutes = require("./routes/order.js");
 
 //DB connection
 mongoose
@@ -25,7 +30,12 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 
+//routes
 app.use("/api", authRoutes);
+app.use("/api", userRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", productRoutes);
+app.use("/api", orderRoutes);
 
 //Starting a server
 const port = process.env.PORT;
