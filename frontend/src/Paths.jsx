@@ -9,6 +9,13 @@ import AdminRoute from "./auth/helper/AdminRoutes";
 import PrivateRoute from "./auth/helper/PrivateRoutes";
 import UserDashBoard from "./user/UserDashBoard";
 import AdminDashBoard from "./user/AdminDashBoard";
+import AddCategory from "./admin/AddCategory";
+import ManageCategories from "./admin/ManageCategories";
+import AddProduct from "./admin/AddProduct";
+import ManageProducts from "./admin/ManageProducts";
+import Orders from "./admin/Orders";
+import UpdateProduct from "./admin/UpdateProduct";
+import Cart from "./core/Cart";
 
 const Paths = () => {
   return (
@@ -18,6 +25,7 @@ const Paths = () => {
         <Route path="/" exact element={<Home />} />
         <Route path="/signup" exact element={<Signup />} />
         <Route path="/signin" exact element={<Signin />} />
+        <Route path="/cart" element={<Cart />} />
 
         <Route
           path="/user/dashboard"
@@ -37,8 +45,58 @@ const Paths = () => {
           }
         ></Route>
 
-        {/* <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} /> */}
-        {/* <AdminRoute path="/admin/dashboard" exact component={AdminDashBoard} /> */}
+        <Route
+          path="/admin/create/category"
+          element={
+            <AdminRoute>
+              <AddCategory />
+            </AdminRoute>
+          }
+        ></Route>
+
+        <Route
+          path="/admin/category"
+          element={
+            <AdminRoute>
+              <ManageCategories />
+            </AdminRoute>
+          }
+        ></Route>
+
+        <Route
+          path="/admin/create/product"
+          element={
+            <AdminRoute>
+              <AddProduct />
+            </AdminRoute>
+          }
+        ></Route>
+
+        <Route
+          path="/admin/products"
+          element={
+            <AdminRoute>
+              <ManageProducts />
+            </AdminRoute>
+          }
+        ></Route>
+        <Route
+          path="/admin/orders"
+          element={
+            <AdminRoute>
+              <Orders />
+            </AdminRoute>
+          }
+        ></Route>
+
+        <Route
+          path="/admin/product/update/:productId"
+          element={
+            <AdminRoute>
+              <UpdateProduct />
+            </AdminRoute>
+          }
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

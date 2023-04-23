@@ -12,9 +12,9 @@ const Base = ({
       <Navbar />
       <div className={className}>{children}</div>
       <div>
-        <footer className="footer fixed bottom-0 footer-center p-4 bg-base-300 text-base-content">
+        <footer className="footer  bottom-0 footer-center p-4 bg-base-300 text-base-content">
           <div>
-            <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+            <p>Copyright © 2023 - All right reserved </p>
           </div>
         </footer>
       </div>
