@@ -197,7 +197,7 @@ const Signup = () => {
                   <span className="capitalize text-indigo-600">
                     terms of service
                   </span>{" "}
-                  to learn more Values: {JSON.stringify(values)}
+                  to learn more Values:
                 </span>
               </p>
             </div>

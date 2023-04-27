@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const Order = require("../models/order");
+const { Order } = require("../models/order");
 
 exports.getUserById = (req, res, next, id) => {
   User.findById(id).exec((err, user) => {
@@ -14,6 +14,17 @@ exports.getUserById = (req, res, next, id) => {
   });
 };
 
+exports.getUserByIdObj = (req, res, id) => {
+  const user = User.findById(id).exec((err, user) => {
+    if (err || !user) {
+      return res.status(400).json({
+        error: "No user was found in DB",
+      });
+    }
+
+    res.status(200).json(user);
+  });
+};
 exports.getUser = (req, res) => {
   req.profile.salt = undefined;
   req.profile.encry_password = undefined;

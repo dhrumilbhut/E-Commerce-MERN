@@ -12,6 +12,7 @@ const Orders = () => {
 
   const preload = () => {
     getOrders(user._id, token).then((data) => {
+      console.log(data);
       if (data.error) {
         console.log(data.error);
       } else {
@@ -73,6 +74,8 @@ const Orders = () => {
                               </div>
                             ))} */}
                           </td>
+
+                          <td className="">{user.name}</td>
 
                           <td className="w-full">
                             {order?.products?.map((product, i) => (

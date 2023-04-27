@@ -30,11 +30,11 @@ const ManageCategories = () => {
 
   const deleteThisCategory = (categoryId) => {
     deleteProduct(categoryId, user._id, token).then((data) => {
-      if (data.error) {
-        console.log(data.error);
-      } else {
-        preload();
-      }
+      // if (data.error) {
+      //   console.log(data.error);
+      // } else {
+      preload();
+      // }
     });
   };
 

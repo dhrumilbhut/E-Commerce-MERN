@@ -7,8 +7,8 @@ import { toast } from "react-toastify";
 const Signin = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
-    email: "asdf@gmail.com",
-    password: "12345",
+    email: "",
+    password: "",
     error: "",
     loading: false,
     didRedirect: false,
@@ -179,10 +179,6 @@ const Signin = () => {
                 </div>
               </div>
             </form>
-
-            <div className="mt-3 space-y-3">
-              <p> {JSON.stringify(values)}</p>
-            </div>
           </div>
         </div>
       </div>
