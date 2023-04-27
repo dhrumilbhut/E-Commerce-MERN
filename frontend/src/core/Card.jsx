@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { addItemToCart, removeItemFromCart } from "./helper/CartHelper";
+import { addItemToCart, removeItemFromCart } from "./helper/cartHelper";
 import ImageHelper from "./helper/ImageHelper";
 
 const Card = ({
