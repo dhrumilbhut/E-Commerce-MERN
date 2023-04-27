@@ -4,7 +4,7 @@ import "../styles.css";
 import Base from "./Base";
 import Card from "./Card";
 import Checkout from "./Checkout";
-import { loadCart } from "./helper/CartHelper";
+import { loadCart } from "./helper/cartHelper";
 import { getProducts } from "./helper/coreapicalls";
 
 const Cart = () => {
