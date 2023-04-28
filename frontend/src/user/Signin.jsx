@@ -87,13 +87,13 @@ const Signin = () => {
     <Base title="Signin page" description="A page for user signin">
       {loadingMessage()}
       {performRedirect()}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center h-[80vh] text-black">
         <div className="flex items-center justify-center px-4 py-10 sm:px-6 lg:px-8 sm:py-16 lg:py-20">
           <div className="xl:w-full xl:max-w-sm 2xl:max-w-md xl:mx-auto">
-            <h2 className="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
               Sign in
             </h2>
-            <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
+            <p className="mt-2">
               Don&apos;t have an account?{" "}
               <a
                 href="/signup"
@@ -109,14 +109,14 @@ const Signin = () => {
                 <div>
                   <label
                     htmlFor=""
-                    className="text-base font-medium text-gray-900 dark:text-gray-200"
+                    className="text-black font-medium "
                   >
                     {" "}
                     Email address{" "}
                   </label>
                   <div className="mt-2.5">
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent py-2 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent py-2 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700  dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       type="email"
                       value={email}
                       onChange={handleChange("email")}
@@ -129,7 +129,7 @@ const Signin = () => {
                   <div className="flex items-center justify-between">
                     <label
                       htmlFor=""
-                      className="text-base font-medium text-gray-900 dark:text-gray-200"
+                      className="text-base font-medium"
                     >
                       {" "}
                       Password{" "}
@@ -146,7 +146,7 @@ const Signin = () => {
                   </div>
                   <div className="mt-2.5">
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent py-2 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent py-2 px-3 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700  dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       type="password"
                       value={password}
                       onChange={handleChange("password")}

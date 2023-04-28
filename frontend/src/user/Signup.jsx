@@ -4,6 +4,7 @@ import { signup } from "../auth/helper";
 import Base from "../core/Base";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -13,6 +14,8 @@ const Signup = () => {
     error: "",
     success: false,
   });
+
+  const navigate = useNavigate();
 
   const { name, email, password, error, success } = values;
 
@@ -38,14 +41,10 @@ const Signup = () => {
             success: true,
           });
           toast.success("User Created Successfully", { theme: "dark" });
+          navigate("/");
         }
       })
       .catch(console.log("Error in signup"));
-  };
-
-  const successMessage = () => {
-    if (success) {
-    }
   };
 
   return (

@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const Base = ({
   title = "Title",
   description = "Description",
-  className = "bg-dark text-white p-4",
+  className = "bg-gray-100 text-white p-4",
   children,
 }) => {
   return (
@@ -12,7 +12,7 @@ const Base = ({
       <Navbar />
       <div className={className}>{children}</div>
       <div>
-        <footer className="footer  bottom-0 footer-center p-4 bg-base-300 text-base-content">
+        <footer className="footer fixed  bottom-0 footer-center p-4 bg-base-300 text-base-content">
           <div>
             <p>Copyright © 2023 - All right reserved </p>
           </div>

@@ -42,12 +42,12 @@ const Checkout = ({ products, setReload = (f) => f, reload = undefined }) => {
 
   const showButton = () => {
     return isAuthenticated() ? (
-      <button className="btn btn-primary" onClick={checkOut}>
+      <button className="btn" onClick={checkOut}>
         Check Out
       </button>
     ) : (
       <Link to="/signin">
-        <button className="btn btn-primary">Signin</button>
+        <button className="btn">Signin</button>
       </Link>
     );
   };
@@ -56,7 +56,7 @@ const Checkout = ({ products, setReload = (f) => f, reload = undefined }) => {
     <h1>
       {/* StripeCheckout {getFinalAmount()}
       {showButton()} */}
-      <div className="flex flex-col mx-auto max-w-3xl p-6 space-y-4 sm:p-10 dark:bg-gray-900 dark:text-gray-100">
+      <div className="flex flex-col mx-auto max-w-3xl p-6 space-y-4 sm:p-10  border-2 border-base-300 shadow-2xl text-black">
         <h2 className="text-xl font-semibold">Your cart</h2>
         <ul className="flex flex-col divide-y divide-gray-700">
           {products.map((product) => (
@@ -135,7 +135,7 @@ const Checkout = ({ products, setReload = (f) => f, reload = undefined }) => {
           <Link to={"/"}>
             <button
               type="button"
-              className="px-6 py-2 border rounded-md dark:border-violet-400"
+              className="btn px-6 py-2 border rounded-md "
             >
               Back
               <span className="sr-only sm:not-sr-only"> to shop</span>

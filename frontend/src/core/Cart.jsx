@@ -38,7 +38,7 @@ const Cart = () => {
       {/* <div>
           <LoadAllProducts />
         </div> */}
-      <div>
+      <div className="h-screen">
         <Checkout products={products} setReload={setReload} />
       </div>
       {/* </div> */}

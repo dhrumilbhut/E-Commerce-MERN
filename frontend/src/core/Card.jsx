@@ -34,10 +34,7 @@ const Card = ({
   const showAddToCart = (addToCart) => {
     return (
       addToCart && (
-        <button
-          className="btn btn-outline  btn-primary px-20 "
-          onClick={addToKart}
-        >
+        <button className="btn   px-20 " onClick={addToKart}>
           Add to cart
         </button>
       )
@@ -60,9 +57,11 @@ const Card = ({
     );
   };
   return (
-    <div className="card w-96 bg-base-100 border-2 border-violet-800 shadow-2xl mb-10">
+    <div className="card w-96 bg-gray-100 text-black border-2 border-base-300 shadow-2xl mb-10 h-3/5 ">
       {/* {getARedirect(redirect)} */}
+
       <ImageHelper product={product} />
+
       <div className="card-body items-center text-center">
         <h2 className="card-title">{cardTitle}</h2>
         <p>{cardDescription}</p>

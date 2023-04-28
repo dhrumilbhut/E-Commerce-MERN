@@ -37,7 +37,7 @@ const ManageProducts = () => {
   return (
     <Base>
       <>
-        <section className="container px-4 w-3/4 mx-auto py-4">
+        <section className="container px-4 w-3/4 mx-auto py-4 h-[85vh]">
           <div className="flex items-center justify-between"></div>
           <div className="flex flex-col mt-6">
             <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
